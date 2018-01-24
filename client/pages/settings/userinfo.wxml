@@ -1,0 +1,6 @@
+<!--userinfo.wxml-->
+<view class="container">
+    <view class="title">
+      <text class="userinfo-nickname">更新个人基本信息</text>
+    </view>
+</view>

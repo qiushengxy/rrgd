@@ -1,0 +1,6 @@
+<!--preferences.wxml-->
+<view class="container">
+    <view class="title">
+      <text class="userinfo-nickname">设置个人偏好</text>
+    </view>
+</view>

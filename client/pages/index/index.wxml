@@ -1,0 +1,37 @@
+<!--index.wxml-->
+<view class="container">
+    <!-- 用户登录测试 -->
+    <view class="userinfo" bindtap="login">
+        <image
+            class="userinfo-avatar"
+            src="{{logged ? userInfo.avatarUrl : './user-unlogin.png'}}"
+            background-size="cover"
+        ></image>
+        <view>
+            <text class="userinfo-nickname">{{logged ? userInfo.nickName : '登录中...'}}</text>
+        </view>
+        <view>
+            <navigator class="userinfo-update" url="/pages/settings/settings">个人设置</navigator>
+        </view>
+    </view>
+
+    <view class="tunnel">
+        <view class="tunnel-text uploader-text">
+            <text bindtap="doRequest">UserInfo can be retrieved from Weixin:</text>
+        </view>
+        <view class="tunnel-text" wx:if="{{logged}}">
+            <text class="request-text">{{'Gender: ' + userInfo.gender}}</text>
+        </view>
+        <view class="tunnel-text" wx:if="{{logged}}">
+            <text class="request-text">{{'Province: ' + userInfo.province}}</text>
+        </view>
+        <view class="tunnel-text" wx:if="{{logged}}">
+            <text class="request-text">{{'UserInfoString: ' + userInfoStr}}</text>
+        </view>
+    </view>
+
+    <view>
+
+    </view>
+
+</view>
