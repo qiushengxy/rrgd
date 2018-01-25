@@ -8,7 +8,10 @@ Page({
         userInfo: {},
         logged: false,
         takeSession: false,
-        requestResult: ''
+        requestResult: '',
+        currentTab: 0,
+        winWidth: 0,
+        winHeight: 0
     },
 
     // 用户登录示例
@@ -89,9 +92,44 @@ Page({
             wx.request(options)
         }
     },
+    /** 
+         * 滑动切换tab 
+         */
+    bindChange: function (e) {
+
+      var that = this;
+      that.setData({ currentTab: e.detail.current });
+
+    },
+    /** 
+     * 点击tab切换 
+     */
+    swichNav: function (e) {
+
+      var that = this;
+
+      if (this.data.currentTab === e.target.dataset.current) {
+        return false;
+      } else {
+        that.setData({
+          currentTab: e.target.dataset.current
+        })
+      }
+    },  
 
     onLoad: function () {
       // 页面渲染后 执行
+      var that = this;
       this.login()
+      wx.getSystemInfo({
+
+        success: function (res) {
+          that.setData({
+            winWidth: res.windowWidth,
+            winHeight: res.windowHeight
+          });
+        }
+
+      });  
     }
 })
