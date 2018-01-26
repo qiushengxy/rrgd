@@ -1,6 +1,8 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/recommend/recommend",
+    "pages/footprint/footprint",
     "pages/settings/settings",
     "pages/settings/userinfo",
     "pages/settings/preferences"
@@ -11,5 +13,36 @@
     "navigationBarBackgroundColor": "#F6F6F6",
     "navigationBarTitleText": "人人观点",
     "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#11cd6e",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "images/hot-on.png",
+        "iconPath": "images/hot.png",
+        "pagePath": "pages/index/index",
+        "text": "热点"
+      },
+      {
+        "selectedIconPath": "images/recommend-on.png",
+        "iconPath": "images/recommend.png",
+        "pagePath": "pages/recommend/recommend",
+        "text": "推荐"
+      },
+      {
+        "selectedIconPath": "images/footprint-on.png",
+        "iconPath": "images/footprint.png",
+        "pagePath": "pages/footprint/footprint",
+        "text": "足迹"
+      },
+      {
+        "selectedIconPath": "images/settings-on.png",
+        "iconPath": "images/settings.png",
+        "pagePath": "pages/settings/settings",
+        "text": "设置"
+      }
+    ]
   }
 }

@@ -134,7 +134,9 @@ page {
     width: 100%;  
     border-bottom: 2rpx solid #777777;  
     text-align: center;  
-    line-height: 80rpx;}  
+    line-height: 48rpx;
+}
+
 .swiper-tab-list{  font-size: 30rpx;  
     display: inline-block;  
     width: 33.33%;  
