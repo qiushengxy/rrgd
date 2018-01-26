@@ -17,7 +17,7 @@
   "tabBar": {
     "color": "#a9b7b7",
     "selectedColor": "#11cd6e",
-    "borderStyle": "white",
+    "borderStyle": "black",
     "list": [
       {
         "selectedIconPath": "images/hot-on.png",

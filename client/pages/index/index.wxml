@@ -13,36 +13,114 @@
 
 <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">  
     <swiper-item>  
-      <view>
-        全部投票话题
-      </view>
+      <scroll-view scroll-y="true" class="scroll-view" bindscrolltolower="lower">
+        <block wx:for="{{list}}">
+          <view class="list-item">
+            <image src="{{item.headpic}}" class="list-item-image"></image>
+            <view class="list-item-topic">
+              <text>{{item.name}}</text>
+              <view class="list-item-time">{{item.time}}</view>
+            </view>
+          </view> 
+        </block>
+      </scroll-view>
     </swiper-item>  
 
     <swiper-item>  
-      <view>ToDo</view>  
+      <scroll-view scroll-y="true" class="scroll-view" bindscrolltolower="lower">
+        <block wx:for="{{list}}">
+          <view class="list-item">
+            <image src="{{item.headpic}}" class="list-item-image"></image>
+            <view class="list-item-topic">
+              <text>{{item.name}}</text>
+              <view class="list-item-time">{{item.time}}</view>
+            </view>
+          </view> 
+        </block>
+      </scroll-view>
     </swiper-item>  
 
     <swiper-item>  
-      <view>ToDo</view>  
+      <scroll-view scroll-y="true" class="scroll-view" bindscrolltolower="lower">
+        <block wx:for="{{list}}">
+          <view class="list-item">
+            <image src="{{item.headpic}}" class="list-item-image"></image>
+            <view class="list-item-topic">
+              <text>{{item.name}}</text>
+              <view class="list-item-time">{{item.time}}</view>
+            </view>
+          </view> 
+        </block>
+      </scroll-view>
     </swiper-item>
 
     <swiper-item>  
-      <view>ToDo</view>  
+      <scroll-view scroll-y="true" class="scroll-view" bindscrolltolower="lower">
+        <block wx:for="{{list}}">
+          <view class="list-item">
+            <image src="{{item.headpic}}" class="list-item-image"></image>
+            <view class="list-item-topic">
+              <text>{{item.name}}</text>
+              <view class="list-item-time">{{item.time}}</view>
+            </view>
+          </view> 
+        </block>
+      </scroll-view>
     </swiper-item>
 
     <swiper-item>  
-      <view>ToDo</view>  
+      <scroll-view scroll-y="true" class="scroll-view" bindscrolltolower="lower">
+        <block wx:for="{{list}}">
+          <view class="list-item">
+            <image src="{{item.headpic}}" class="list-item-image"></image>
+            <view class="list-item-topic">
+              <text>{{item.name}}</text>
+              <view class="list-item-time">{{item.time}}</view>
+            </view>
+          </view> 
+        </block>
+      </scroll-view>
     </swiper-item>
 
     <swiper-item>  
-      <view>ToDo</view>  
+      <scroll-view scroll-y="true" class="scroll-view" bindscrolltolower="lower">
+        <block wx:for="{{list}}">
+          <view class="list-item">
+            <image src="{{item.headpic}}" class="list-item-image"></image>
+            <view class="list-item-topic">
+              <text>{{item.name}}</text>
+              <view class="list-item-time">{{item.time}}</view>
+            </view>
+          </view> 
+        </block>
+      </scroll-view>
     </swiper-item>
 
     <swiper-item>  
-      <view>ToDo</view>  
+      <scroll-view scroll-y="true" class="scroll-view" bindscrolltolower="lower">
+        <block wx:for="{{list}}">
+          <view class="list-item">
+            <image src="{{item.headpic}}" class="list-item-image"></image>
+            <view class="list-item-topic">
+              <text>{{item.name}}</text>
+              <view class="list-item-time">{{item.time}}</view>
+            </view>
+          </view> 
+        </block>
+      </scroll-view>
     </swiper-item>
 
     <swiper-item>  
-      <view>ToDo</view>  
+      <scroll-view scroll-y="true" class="scroll-view" bindscrolltolower="lower">
+        <block wx:for="{{list}}">
+          <view class="list-item">
+            <image src="{{item.headpic}}" class="list-item-image"></image>
+            <view class="list-item-topic">
+              <text>{{item.name}}</text>
+              <view class="list-item-time">{{item.time}}</view>
+            </view>
+          </view> 
+        </block>
+      </scroll-view>
     </swiper-item>
 </swiper>

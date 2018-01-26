@@ -1,11 +1,79 @@
 // pages/recommend/recommend.js
+var list = [
+  {
+    headpic: "/images/hot.png",
+    name: "这是一个比较热门或者有争议的投票话题",
+    time: "2018/1/20"
+  },
+  {
+    headpic: "/images/hot-on.png",
+    name: "这是一个比较热门或者有争议的投票话题",
+    time: "2018/1/20"
+  },
+  {
+    headpic: "/images/recommend.png",
+    name: "这是一个比较热门或者有争议的投票话题",
+    time: "2018/1/20"
+  },
+  {
+    headpic: "/images/footprint-on.png",
+    name: "这是一个比较热门或者有争议的投票话题",
+    time: "2018/1/20"
+  },
+  {
+    headpic: "/images/settings.png",
+    name: "这是一个比较热门或者有争议的投票话题",
+    time: "2018/1/20"
+  },
+  {
+    headpic: "/images/hot.png",
+    name: "这是一个比较热门或者有争议的投票话题",
+    time: "2018/1/20"
+  },
+  {
+    headpic: "/images/hot.png",
+    name: "这是一个比较热门或者有争议的投票话题",
+    time: "2018/1/20"
+  },
+  {
+    headpic: "/images/hot-on.png",
+    name: "这是一个比较热门或者有争议的投票话题",
+    time: "2018/1/20"
+  },
+  {
+    headpic: "/images/hot.png",
+    name: "这是一个比较热门或者有争议的投票话题",
+    time: "2018/1/20"
+  },
+  {
+    headpic: "/images/hot.png",
+    name: "这是一个比较热门或者有争议的投票话题",
+    time: "2018/1/20"
+  },
+  {
+    headpic: "/images/hot.png",
+    name: "这是一个比较热门或者有争议的投票话题",
+    time: "2018/1/20"
+  },
+  {
+    headpic: "/images/hot.png",
+    name: "这是一个比较热门或者有争议的投票话题",
+    time: "2018/1/20"
+  },
+  {
+    headpic: "/images/hot.png",
+    name: "这是一个比较热门或者有争议的投票话题",
+    time: "2018/1/20"
+  }
+];
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+    list: list
   },
 
   /**
