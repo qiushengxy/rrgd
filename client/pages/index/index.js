@@ -185,6 +185,12 @@ Page({
       }
     },  
 
+    openTopic: function () {
+      wx.navigateTo({
+        url: '/pages/topics/topic',
+      });
+    },
+
     onLoad: function () {
       // 页面渲染后 执行
       var that = this;

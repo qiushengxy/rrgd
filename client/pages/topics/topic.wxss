@@ -1,0 +1,16 @@
+/* pages/topics/topic.wxss */
+.topic-container {
+  height: 100%;
+}
+
+.topic-title {
+  font-weight: bold;
+  font-size: 64rpx;
+  text-align: center;
+  padding-bottom: 32rpx;
+}
+
+.topic-text {
+  font-size: 32rpx;
+  padding-bottom: 24rpx;
+}

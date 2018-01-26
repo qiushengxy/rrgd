@@ -5,7 +5,8 @@
     "pages/footprint/footprint",
     "pages/settings/settings",
     "pages/settings/userinfo",
-    "pages/settings/preferences"
+    "pages/settings/preferences",
+    "pages/topics/topic"
   ],
   "window":{
     "backgroundColor":"#F6F6F6",

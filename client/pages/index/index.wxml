@@ -15,12 +15,12 @@
     <swiper-item>  
       <scroll-view scroll-y="true" class="scroll-view" bindscrolltolower="lower">
         <block wx:for="{{list}}">
-          <view class="list-item">
+          <view class="list-item" bindtap='openTopic'>
             <image src="{{item.headpic}}" class="list-item-image"></image>
             <view class="list-item-topic">
               <text>{{item.name}}</text>
-              <view class="list-item-time">{{item.time}}</view>
             </view>
+            <view class="list-item-time">{{item.time}}</view>
           </view> 
         </block>
       </scroll-view>
@@ -29,12 +29,12 @@
     <swiper-item>  
       <scroll-view scroll-y="true" class="scroll-view" bindscrolltolower="lower">
         <block wx:for="{{list}}">
-          <view class="list-item">
+          <view class="list-item" bindtap='openTopic'>
             <image src="{{item.headpic}}" class="list-item-image"></image>
             <view class="list-item-topic">
               <text>{{item.name}}</text>
-              <view class="list-item-time">{{item.time}}</view>
             </view>
+            <view class="list-item-time">{{item.time}}</view>
           </view> 
         </block>
       </scroll-view>
@@ -43,12 +43,12 @@
     <swiper-item>  
       <scroll-view scroll-y="true" class="scroll-view" bindscrolltolower="lower">
         <block wx:for="{{list}}">
-          <view class="list-item">
+          <view class="list-item" bindtap='openTopic'>
             <image src="{{item.headpic}}" class="list-item-image"></image>
             <view class="list-item-topic">
               <text>{{item.name}}</text>
-              <view class="list-item-time">{{item.time}}</view>
             </view>
+            <view class="list-item-time">{{item.time}}</view>
           </view> 
         </block>
       </scroll-view>
@@ -57,12 +57,12 @@
     <swiper-item>  
       <scroll-view scroll-y="true" class="scroll-view" bindscrolltolower="lower">
         <block wx:for="{{list}}">
-          <view class="list-item">
+          <view class="list-item" bindtap='openTopic'>
             <image src="{{item.headpic}}" class="list-item-image"></image>
             <view class="list-item-topic">
               <text>{{item.name}}</text>
-              <view class="list-item-time">{{item.time}}</view>
             </view>
+            <view class="list-item-time">{{item.time}}</view>
           </view> 
         </block>
       </scroll-view>
@@ -71,12 +71,12 @@
     <swiper-item>  
       <scroll-view scroll-y="true" class="scroll-view" bindscrolltolower="lower">
         <block wx:for="{{list}}">
-          <view class="list-item">
+          <view class="list-item" bindtap='openTopic'>
             <image src="{{item.headpic}}" class="list-item-image"></image>
             <view class="list-item-topic">
               <text>{{item.name}}</text>
-              <view class="list-item-time">{{item.time}}</view>
             </view>
+            <view class="list-item-time">{{item.time}}</view>
           </view> 
         </block>
       </scroll-view>
@@ -85,12 +85,12 @@
     <swiper-item>  
       <scroll-view scroll-y="true" class="scroll-view" bindscrolltolower="lower">
         <block wx:for="{{list}}">
-          <view class="list-item">
+          <view class="list-item" bindtap='openTopic'>
             <image src="{{item.headpic}}" class="list-item-image"></image>
             <view class="list-item-topic">
               <text>{{item.name}}</text>
-              <view class="list-item-time">{{item.time}}</view>
             </view>
+            <view class="list-item-time">{{item.time}}</view>
           </view> 
         </block>
       </scroll-view>
@@ -99,12 +99,12 @@
     <swiper-item>  
       <scroll-view scroll-y="true" class="scroll-view" bindscrolltolower="lower">
         <block wx:for="{{list}}">
-          <view class="list-item">
+          <view class="list-item" bindtap='openTopic'>
             <image src="{{item.headpic}}" class="list-item-image"></image>
             <view class="list-item-topic">
               <text>{{item.name}}</text>
-              <view class="list-item-time">{{item.time}}</view>
             </view>
+            <view class="list-item-time">{{item.time}}</view>
           </view> 
         </block>
       </scroll-view>
@@ -113,12 +113,12 @@
     <swiper-item>  
       <scroll-view scroll-y="true" class="scroll-view" bindscrolltolower="lower">
         <block wx:for="{{list}}">
-          <view class="list-item">
+          <view class="list-item" bindtap='openTopic'>
             <image src="{{item.headpic}}" class="list-item-image"></image>
             <view class="list-item-topic">
               <text>{{item.name}}</text>
-              <view class="list-item-time">{{item.time}}</view>
             </view>
+            <view class="list-item-time">{{item.time}}</view>
           </view> 
         </block>
       </scroll-view>
