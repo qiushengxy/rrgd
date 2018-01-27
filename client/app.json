@@ -2,6 +2,7 @@
   "pages":[
     "pages/index/index",
     "pages/recommend/recommend",
+    "pages/poll/poll",
     "pages/footprint/footprint",
     "pages/settings/settings",
     "pages/settings/userinfo",
@@ -31,6 +32,12 @@
         "iconPath": "images/recommend.png",
         "pagePath": "pages/recommend/recommend",
         "text": "推荐"
+      },
+      {
+        "selectedIconPath": "images/money-on.png",
+        "iconPath": "images/money.png",
+        "pagePath": "pages/poll/poll",
+        "text": "赚钱"
       },
       {
         "selectedIconPath": "images/footprint-on.png",
