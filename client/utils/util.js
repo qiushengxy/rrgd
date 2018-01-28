@@ -39,4 +39,9 @@ var showModel = (title, content) => {
     })
 }
 
-module.exports = { formatTime, showBusy, showSuccess, showModel }
+// 显示失败提示
+var hideToast = () => {
+  wx.hideToast();
+}
+
+module.exports = { formatTime, showBusy, showSuccess, showModel, hideToast }

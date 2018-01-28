@@ -1,6 +1,24 @@
 <!--preferences.wxml-->
-<view class="container">
-    <view class="title">
+<view>
+    <view class="page-title">
       <text class="userinfo-nickname">设置个人偏好</text>
+    </view>
+
+    <view class="category">
+      <text class="title">当有我感兴趣的新投票话题时</text>
+      <checkbox-group bindchange="pushCheckboxChange">
+        <label class="checkbox">
+          <checkbox checked="{{allowPush}}"/>允许接收推送消息
+        </label>
+      </checkbox-group>
+    </view>
+
+    <view class="category">
+      <text class="title">请选择你喜爱的栏目和类别</text>
+      <checkbox-group bindchange="categoryCheckboxChange">
+        <label class="checkbox"  wx:for-items="{{categories}}">
+          <checkbox value="{{item.key}}" checked="{{item.checked}}"/>{{item.value}}
+        </label>
+      </checkbox-group>
     </view>
 </view>

@@ -2,14 +2,14 @@
 <view class="container">
     <!-- 用户登录测试 -->
     <view class="page-title">
-      <text class="userinfo-nickname">更新用户信息</text>
+      <text class="userinfo-nickname">个人设置</text>
     </view>
 
-    <view class="list">
-      <navigator class="userinfo-update" url="/pages/settings/userinfo">个人基本信息</navigator>
+    <view class="list-item">
+      <navigator class="menu-item" url="/pages/settings/userinfo">个人基本信息</navigator>
     </view>
 
-    <view class="list">
-      <navigator class="userinfo-update" url="/pages/settings/preferences">个人偏好设置</navigator>
-        </view>
+    <view class="list-item">
+      <navigator class="menu-item" url="/pages/settings/preferences">个人偏好设置</navigator>
+    </view>
 </view>

@@ -1,6 +1,52 @@
 <!--userinfo.wxml-->
 <view class="container">
-    <view class="title">
-      <text class="userinfo-nickname">更新个人基本信息</text>
+    <view class="page-title">
+      <text class="page-title-text">更新个人基本信息</text>
     </view>
+
+    <view class="category">
+      <text class="title">性别</text>
+      <radio-group class="radio-group" bindchange="genderChange">
+        <label class="radio" wx:for-items="{{genderItems}}">
+          <radio value="{{item.key}}" checked="{{item.checked}}"/>{{item.value}}
+        </label>
+      </radio-group>
+    </view>
+
+    <view class="category">
+      <text class="title">年纪</text>
+      <radio-group class="radio-group" bindchange="birthChange">
+        <label class="radio" wx:for-items="{{birthItems}}">
+          <radio value="{{item.key}}" checked="{{item.checked}}"/>{{item.value}}
+        </label>
+      </radio-group>
+    </view>
+
+    <view class="category">
+      <text class="title">职业</text>
+      <radio-group class="radio-group" bindchange="occupationChange">
+        <label class="radio" wx:for-items="{{occupationItems}}">
+          <radio value="{{item.key}}" checked="{{item.checked}}"/>{{item.value}}
+        </label>
+      </radio-group>
+    </view>
+
+    <view class="category">
+      <text class="title">教育程度</text>
+      <radio-group class="radio-group" bindchange="educationChange">
+        <label class="radio" wx:for-items="{{educationItems}}">
+          <radio value="{{item.key}}" checked="{{item.checked}}"/>{{item.value}}
+        </label>
+      </radio-group>
+    </view>
+
+    <view class="category">
+      <text class="title">收入水平</text>
+      <radio-group class="radio-group" bindchange="incomeChange">
+        <label class="radio" wx:for-items="{{incomeItems}}">
+          <radio value="{{item.key}}" checked="{{item.checked}}"/>{{item.value}}
+        </label>
+      </radio-group>
+    </view>
+
 </view>

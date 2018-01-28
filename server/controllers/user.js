@@ -7,7 +7,7 @@ module.exports = async (ctx, next) => {
     if (ctx.state.$wxInfo.loginState === 1) {
         // loginState 为 1，登录态校验成功
         // ctx.state.data = ctx.state.$wxInfo.userinfo;
-        ctx.state.data = await db_users.addOrUpdateUser(ctx.state.$wxInfo.userinfo);
+        ctx.state.data = await db_users.addOrGetUser(ctx.state.$wxInfo.userinfo);
     } else {
         ctx.state.code = -1
     }
