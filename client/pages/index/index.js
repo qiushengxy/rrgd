@@ -171,13 +171,8 @@ Page({
         success(result) {
           util.hideToast();
           console.log('request success', result);
-          var resultData = result.data.data;
-          resultData.forEach(function (item) {
-            var images = item.images.split(';;;;;');
-            item.image = images.length > 0 ? images[0] : '';
-          });
           that.setData({
-            list: resultData
+            list: result.data.data
           });
         },
         fail(error) {

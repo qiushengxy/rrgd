@@ -24,7 +24,7 @@
 }
 
 .list-item-left {
-  width: 24%;
+  width: 22%;
   padding-right: 20rpx;
 }
 .list-item-image {
@@ -33,7 +33,7 @@
 }
 
 .list-item-middle {
-  width: 64%;
+  width: 65%;
   padding: 25rpx 0;
 }
 
@@ -58,7 +58,7 @@
 }
 
 .list-item-right {
-  width: 12%;
+  width: 13%;
   float: right;
 }
 
