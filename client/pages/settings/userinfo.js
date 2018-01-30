@@ -74,13 +74,11 @@ Page({
   },
 
   updateMenuItems: function (userInfo) {
-    console.log(userInfo);
     if (userInfo.gender >= 0) {
       this.data.genderItems[userInfo.gender].checked = true;
     } else {
       this.data.genderItems[1].checked = true; // default to male
     }
-    console.log('birthyear=' + userInfo.birthYear);
     if (userInfo.birthYear >= 0) {
       this.data.birthItems[userInfo.birthYear].checked = true;
     } else {

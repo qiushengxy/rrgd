@@ -10,7 +10,54 @@
   padding-bottom: 32rpx;
 }
 
+.topic-images {
+  max-height: 768rpx;
+}
+
+.topic-images-center {
+  display: block;
+  margin: 0 auto;
+}
+
 .topic-text {
   font-size: 32rpx;
-  padding-bottom: 24rpx;
+  line-height: 48rpx;
+  padding: 32rpx;
+}
+
+.topic-question {
+  font-size: 48rpx;
+  font-weight: bold;
+  padding: 32rpx;
+  color: darkred;
+}
+
+.topic-answers {
+  font-size: 32rpx;
+  color: darkblue;
+}
+
+.radio-group {
+  width: 100%;
+  padding-left: 32rpx;
+}
+.radio {
+  width: 100%;
+  display: block;
+  font-size: 32rpx;
+  padding: 16rpx;
+}
+
+.topic-button {
+  padding-top: 32rpx;
+  padding-bottom: 32rpx;
+}
+
+.topic-result {
+  padding-bottom: 128rpx;
+}
+
+.canvas {
+  width: 100%;
+  height: 400px;
 }

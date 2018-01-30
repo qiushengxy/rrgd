@@ -1,31 +1,49 @@
 <!--pages/topics/topic.wxml-->
 <view class="topic-container">
 
-<view class="topic-title">这是一个标题</view>
+<view class="topic-title">{{topic.title}}</view>
+
+<swiper class="topic-images" indicator-dots="true">    
+  <block wx:for="{{topic.images}}" wx:for-index="index">    
+    <swiper-item>    
+      <image src="{{item}}" class="topic-images-center" mode="aspectFill"/>    
+    </swiper-item>
+  </block>    
+</swiper>   
 
 <view class="topic-text">
-2017年1月17日，国家主席习近平在瑞士达沃斯国际会议中心出席世界经济论坛2017年年会开幕式，并发表题为《共担时代责任共促全球发展》的主旨演讲。 
+{{topic.text}}
 </view>
 
-<view class="topic-text">
-　　一样的莽莽雪山，一样的银装素裹。更加纷繁的世界，更加严峻的挑战。
+<view class="topic-question">
+{{topic.question}}
 </view>
 
-<view class="topic-text">
-　　一年前，国家主席习近平在世界经济论坛年会和联合国日内瓦总部发表两场历史性演讲，向世界描绘一幅构建人类命运共同体的壮美蓝图，产生了强烈反响。美国《外交政策》杂志说，这是“具有分水岭意义的时刻”。
+<view class="topic-answers">
+  <radio-group class="radio-group" bindchange="answerChange">
+    <label class="radio" wx:for-items="{{topic.answers}}">
+      <radio value="{{item.key}}"/>{{item.value}}
+    </label>
+  </radio-group>
 </view>
 
-<view class="topic-text">
-　　一年后，达沃斯世界经济论坛将“在分化的世界中打造共同命运”定为主题，与构建人类命运共同体的中国理念同频共振。
+<view class="topic-button">
+  <button type="default" bindtap="clickButton">查看投票结果</button>
 </view>
 
-<view class="topic-text">
-　　一年来，人类命运共同体理念在全球产生了怎样的思想激荡？又给世界带来怎样的变化？新时代的中国又以怎样的胸襟和智慧，与各国携手，打造一个更加美好的世界，迈向人类更加美好的未来？
+<view class="topic-result" wx:if="{{answer}}">
+  <text>所有数据</text>
+  <canvas class="canvas" canvas-id="allGraph"></canvas>
 </view>
 
-<view class="topic-controlls">
-
+<view class="topic-result" wx:if="{{answer}}">
+  <text>按性别</text>
+  <canvas class="canvas" canvas-id="genderGraph"></canvas>
 </view>
 
+<view class="topic-result" wx:if="{{answer}}">
+  <text>按年龄区间</text>
+  <canvas class="canvas" canvas-id="ageGraph"></canvas>
+</view>
 
 </view>
