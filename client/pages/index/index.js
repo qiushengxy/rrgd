@@ -162,17 +162,38 @@ Page({
     onLoad: function () {
       // 页面渲染后 执行
       var that = this;
-      this.login()
-      wx.getSystemInfo({
+      this.login();
 
+      var that = this;
+      var options = {
+        url: config.service.topicsUrl,
+        login: true,
+        success(result) {
+          util.hideToast();
+          console.log('request success', result);
+          var resultData = result.data.data;
+          resultData.forEach(function (item) {
+            var images = item.images.split(';;;;;');
+            item.image = images.length > 0 ? images[0] : '';
+          });
+          that.setData({
+            list: resultData
+          });
+        },
+        fail(error) {
+          util.showModel('请求失败', error);
+          console.log('request fail', error);
+        }
+      };
+      qcloud.request(options);
+
+      wx.getSystemInfo({
         success: function (res) {
           that.setData({
             winWidth: res.windowWidth,
-            winHeight: res.windowHeight,
-            list: list
+            winHeight: res.windowHeight
           });
         }
-
       });  
     }
 })

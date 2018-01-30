@@ -8,6 +8,7 @@
     <view class="swiper-tab-list {{currentTab==5 ? 'on' : ''}}" data-current="5" bindtap="swichNav">财经</view>
     <view class="swiper-tab-list {{currentTab==6 ? 'on' : ''}}" data-current="6" bindtap="swichNav">历史</view>
     <view class="swiper-tab-list {{currentTab==7 ? 'on' : ''}}" data-current="7" bindtap="swichNav">房产</view>
+    <view class="swiper-tab-list {{currentTab==8 ? 'on' : ''}}" data-current="8" bindtap="swichNav">国际</view>
 </view>
 
 
@@ -16,11 +17,17 @@
       <scroll-view scroll-y="true" class="scroll-view" bindscrolltolower="lower">
         <block wx:for="{{list}}">
           <view class="list-item" bindtap='openTopic'>
-            <image src="{{item.headpic}}" class="list-item-image"></image>
-            <view class="list-item-topic">
-              <text>{{item.name}}</text>
+            <view class="list-item-left">
+              <image src="{{item.image}}" class="list-item-image" mode="aspectFit"></image>
             </view>
-            <view class="list-item-time">{{item.time}}</view>
+            <view class="list-item-middle">
+              <view class="list-item-subject">{{item.subject}}</view>
+              <view class="list-item-question">{{item.question}}</view>
+            </view>
+            <view class="list-item-right">
+              <view class="list-item-votes">{{item.votes}}</view>
+              <view class="list-item-label">参与</view>
+            </view>
           </view> 
         </block>
       </scroll-view>
@@ -30,11 +37,17 @@
       <scroll-view scroll-y="true" class="scroll-view" bindscrolltolower="lower">
         <block wx:for="{{list}}">
           <view class="list-item" bindtap='openTopic'>
-            <image src="{{item.headpic}}" class="list-item-image"></image>
-            <view class="list-item-topic">
-              <text>{{item.name}}</text>
+            <view class="list-item-left">
+              <image src="{{item.image}}" class="list-item-image" mode="aspectFit"></image>
             </view>
-            <view class="list-item-time">{{item.time}}</view>
+            <view class="list-item-middle">
+              <view class="list-item-subject">{{item.subject}}</view>
+              <view class="list-item-question">{{item.question}}</view>
+            </view>
+            <view class="list-item-right">
+              <view class="list-item-votes">{{item.votes}}</view>
+              <view class="list-item-label">参与</view>
+            </view>
           </view> 
         </block>
       </scroll-view>
@@ -44,83 +57,139 @@
       <scroll-view scroll-y="true" class="scroll-view" bindscrolltolower="lower">
         <block wx:for="{{list}}">
           <view class="list-item" bindtap='openTopic'>
-            <image src="{{item.headpic}}" class="list-item-image"></image>
-            <view class="list-item-topic">
-              <text>{{item.name}}</text>
+            <view class="list-item-left">
+              <image src="{{item.image}}" class="list-item-image" mode="aspectFit"></image>
             </view>
-            <view class="list-item-time">{{item.time}}</view>
+            <view class="list-item-middle">
+              <view class="list-item-subject">{{item.subject}}</view>
+              <view class="list-item-question">{{item.question}}</view>
+            </view>
+            <view class="list-item-right">
+              <view class="list-item-votes">{{item.votes}}</view>
+              <view class="list-item-label">参与</view>
+            </view>
           </view> 
         </block>
       </scroll-view>
-    </swiper-item>
+    </swiper-item>  
 
     <swiper-item>  
       <scroll-view scroll-y="true" class="scroll-view" bindscrolltolower="lower">
         <block wx:for="{{list}}">
           <view class="list-item" bindtap='openTopic'>
-            <image src="{{item.headpic}}" class="list-item-image"></image>
-            <view class="list-item-topic">
-              <text>{{item.name}}</text>
+            <view class="list-item-left">
+              <image src="{{item.image}}" class="list-item-image" mode="aspectFit"></image>
             </view>
-            <view class="list-item-time">{{item.time}}</view>
+            <view class="list-item-middle">
+              <view class="list-item-subject">{{item.subject}}</view>
+              <view class="list-item-question">{{item.question}}</view>
+            </view>
+            <view class="list-item-right">
+              <view class="list-item-votes">{{item.votes}}</view>
+              <view class="list-item-label">参与</view>
+            </view>
           </view> 
         </block>
       </scroll-view>
-    </swiper-item>
+    </swiper-item>  
 
     <swiper-item>  
       <scroll-view scroll-y="true" class="scroll-view" bindscrolltolower="lower">
         <block wx:for="{{list}}">
           <view class="list-item" bindtap='openTopic'>
-            <image src="{{item.headpic}}" class="list-item-image"></image>
-            <view class="list-item-topic">
-              <text>{{item.name}}</text>
+            <view class="list-item-left">
+              <image src="{{item.image}}" class="list-item-image" mode="aspectFit"></image>
             </view>
-            <view class="list-item-time">{{item.time}}</view>
+            <view class="list-item-middle">
+              <view class="list-item-subject">{{item.subject}}</view>
+              <view class="list-item-question">{{item.question}}</view>
+            </view>
+            <view class="list-item-right">
+              <view class="list-item-votes">{{item.votes}}</view>
+              <view class="list-item-label">参与</view>
+            </view>
           </view> 
         </block>
       </scroll-view>
-    </swiper-item>
+    </swiper-item>  
 
     <swiper-item>  
       <scroll-view scroll-y="true" class="scroll-view" bindscrolltolower="lower">
         <block wx:for="{{list}}">
           <view class="list-item" bindtap='openTopic'>
-            <image src="{{item.headpic}}" class="list-item-image"></image>
-            <view class="list-item-topic">
-              <text>{{item.name}}</text>
+            <view class="list-item-left">
+              <image src="{{item.image}}" class="list-item-image" mode="aspectFit"></image>
             </view>
-            <view class="list-item-time">{{item.time}}</view>
+            <view class="list-item-middle">
+              <view class="list-item-subject">{{item.subject}}</view>
+              <view class="list-item-question">{{item.question}}</view>
+            </view>
+            <view class="list-item-right">
+              <view class="list-item-votes">{{item.votes}}</view>
+              <view class="list-item-label">参与</view>
+            </view>
           </view> 
         </block>
       </scroll-view>
-    </swiper-item>
+    </swiper-item>  
 
     <swiper-item>  
       <scroll-view scroll-y="true" class="scroll-view" bindscrolltolower="lower">
         <block wx:for="{{list}}">
           <view class="list-item" bindtap='openTopic'>
-            <image src="{{item.headpic}}" class="list-item-image"></image>
-            <view class="list-item-topic">
-              <text>{{item.name}}</text>
+            <view class="list-item-left">
+              <image src="{{item.image}}" class="list-item-image" mode="aspectFit"></image>
             </view>
-            <view class="list-item-time">{{item.time}}</view>
+            <view class="list-item-middle">
+              <view class="list-item-subject">{{item.subject}}</view>
+              <view class="list-item-question">{{item.question}}</view>
+            </view>
+            <view class="list-item-right">
+              <view class="list-item-votes">{{item.votes}}</view>
+              <view class="list-item-label">参与</view>
+            </view>
           </view> 
         </block>
       </scroll-view>
-    </swiper-item>
+    </swiper-item>  
 
     <swiper-item>  
       <scroll-view scroll-y="true" class="scroll-view" bindscrolltolower="lower">
         <block wx:for="{{list}}">
           <view class="list-item" bindtap='openTopic'>
-            <image src="{{item.headpic}}" class="list-item-image"></image>
-            <view class="list-item-topic">
-              <text>{{item.name}}</text>
+            <view class="list-item-left">
+              <image src="{{item.image}}" class="list-item-image" mode="aspectFit"></image>
             </view>
-            <view class="list-item-time">{{item.time}}</view>
+            <view class="list-item-middle">
+              <view class="list-item-subject">{{item.subject}}</view>
+              <view class="list-item-question">{{item.question}}</view>
+            </view>
+            <view class="list-item-right">
+              <view class="list-item-votes">{{item.votes}}</view>
+              <view class="list-item-label">参与</view>
+            </view>
           </view> 
         </block>
       </scroll-view>
-    </swiper-item>
+    </swiper-item>  
+
+    <swiper-item>  
+      <scroll-view scroll-y="true" class="scroll-view" bindscrolltolower="lower">
+        <block wx:for="{{list}}">
+          <view class="list-item" bindtap='openTopic'>
+            <view class="list-item-left">
+              <image src="{{item.image}}" class="list-item-image" mode="aspectFit"></image>
+            </view>
+            <view class="list-item-middle">
+              <view class="list-item-subject">{{item.subject}}</view>
+              <view class="list-item-question">{{item.question}}</view>
+            </view>
+            <view class="list-item-right">
+              <view class="list-item-votes">{{item.votes}}</view>
+              <view class="list-item-label">参与</view>
+            </view>
+          </view> 
+        </block>
+      </scroll-view>
+    </swiper-item>  
 </swiper>

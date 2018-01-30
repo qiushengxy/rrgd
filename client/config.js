@@ -25,6 +25,12 @@ var config = {
 
         // Preferences
         preferencesUrl: `${host}/weapp/preferences`,
+
+        // Topics
+        topicsUrl: `${host}/weapp/topics`,
+
+        // Topic
+        topicUrl: `${host}/weapp/topic`,
     }
 };
 

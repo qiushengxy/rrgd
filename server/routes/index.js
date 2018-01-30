@@ -20,6 +20,9 @@ router.get('/preferences', validationMiddleware, controllers.preferences)
 router.post('/user', controllers.updateUser)
 router.post('/preferences', controllers.updatePreferences)
 
+router.get('/topics', validationMiddleware, controllers.topics)
+router.get('/topic', validationMiddleware, controllers.topic)
+
 // --- 图片上传 Demo --- //
 // 图片上传接口，小程序端可以直接将 url 填入 wx.uploadFile 中
 router.post('/upload', controllers.upload)

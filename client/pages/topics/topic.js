@@ -15,7 +15,7 @@ Page({
     topic: {
       title: "李小璐疑似出轨PGone",
       question: "你相信李小璐真的出轨了吗？",
-      answers: [{ key: 0, value: "肯定是真的，跟马蓉那个骚货一样"},
+      answers: [{ key: 0, value: "肯定是真的，跟马蓉那个贱人一样"},
         { key: 1, value: "并没有，是有人羡慕嫉妒恨，故意造谣" },
         { key: 2, value: "情况并不明朗，会跟踪事件进展" },
         { key: 3, value: "关我屁事！" }
