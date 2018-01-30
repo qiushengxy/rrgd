@@ -12,7 +12,7 @@
 </swiper>   
 
 <view class="topic-text">
-{{topic.text}}
+{{topic.content}}
 </view>
 
 <view class="topic-question">
@@ -27,7 +27,7 @@
   </radio-group>
 </view>
 
-<view class="topic-button">
+<view class="topic-button" wx:if="{{topic.content}}">
   <button type="default" bindtap="clickButton">查看投票结果</button>
 </view>
 

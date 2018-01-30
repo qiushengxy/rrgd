@@ -153,9 +153,10 @@ Page({
       }
     },  
 
-    openTopic: function () {
+    openTopic: function (event) {
+      console.log(event);
       wx.navigateTo({
-        url: '/pages/topics/topic',
+        url: '/pages/topics/topic?id=' + event.currentTarget.dataset.id
       });
     },
 

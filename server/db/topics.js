@@ -33,12 +33,12 @@ var db_topics = {
     });
   },
 
-  getTopic: function (key) {
+  getTopic: function (params) {
     return new Promise((resolve, reject) => {
       var connection = mysql.createConnection(config);
       connection.connect();
 
-      var select = 'SELECT * FROM topics where id=' + key;
+      var select = 'SELECT * FROM topics where id=' + params.id;
       connection.query(select, function (err, result) {
         if (err) {
           console.log('[SELECT ERROR] - ', err.message);

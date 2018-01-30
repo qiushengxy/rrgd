@@ -16,7 +16,7 @@
     <swiper-item>  
       <scroll-view scroll-y="true" class="scroll-view" bindscrolltolower="lower">
         <block wx:for="{{list}}">
-          <view class="list-item" bindtap='openTopic'>
+          <view class="list-item" bindtap="openTopic" data-id="{{item.id}}">
             <view class="list-item-left">
               <image src="{{item.thumbnail}}" class="list-item-image" mode="aspectFit"></image>
             </view>
