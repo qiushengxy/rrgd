@@ -1,71 +1,7 @@
 // pages/recommend/recommend.js
-var list = [
-  {
-    headpic: "/images/hot.png",
-    name: "这是一个根据用户的喜爱和偏好所推荐的投票话题",
-    time: "2018/1/20"
-  },
-  {
-    headpic: "/images/hot-on.png",
-    name: "这是一个根据用户的喜爱和偏好所推荐的投票话题",
-    time: "2018/1/20"
-  },
-  {
-    headpic: "/images/recommend.png",
-    name: "这是一个根据用户的喜爱和偏好所推荐的投票话题",
-    time: "2018/1/20"
-  },
-  {
-    headpic: "/images/footprint-on.png",
-    name: "这是一个根据用户的喜爱和偏好所推荐的投票话题",
-    time: "2018/1/20"
-  },
-  {
-    headpic: "/images/settings.png",
-    name: "这是一个根据用户的喜爱和偏好所推荐的投票话题",
-    time: "2018/1/20"
-  },
-  {
-    headpic: "/images/hot.png",
-    name: "这是一个根据用户的喜爱和偏好所推荐的投票话题",
-    time: "2018/1/20"
-  },
-  {
-    headpic: "/images/hot.png",
-    name: "这是一个根据用户的喜爱和偏好所推荐的投票话题",
-    time: "2018/1/20"
-  },
-  {
-    headpic: "/images/hot-on.png",
-    name: "这是一个根据用户的喜爱和偏好所推荐的投票话题",
-    time: "2018/1/20"
-  },
-  {
-    headpic: "/images/hot.png",
-    name: "这是一个根据用户的喜爱和偏好所推荐的投票话题",
-    time: "2018/1/20"
-  },
-  {
-    headpic: "/images/hot.png",
-    name: "这是一个根据用户的喜爱和偏好所推荐的投票话题",
-    time: "2018/1/20"
-  },
-  {
-    headpic: "/images/hot.png",
-    name: "这是一个根据用户的喜爱和偏好所推荐的投票话题",
-    time: "2018/1/20"
-  },
-  {
-    headpic: "/images/hot.png",
-    name: "这是一个根据用户的喜爱和偏好所推荐的投票话题",
-    time: "2018/1/20"
-  },
-  {
-    headpic: "/images/hot.png",
-    name: "这是一个根据用户的喜爱和偏好所推荐的投票话题",
-    time: "2018/1/20"
-  }
-];
+var qcloud = require('../../vendor/wafer2-client-sdk/index')
+var config = require('../../config')
+var util = require('../../utils/util.js')
 
 Page({
 
@@ -73,14 +9,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    list: list
-  },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-  
+    list: {}
   },
 
   /**
@@ -133,9 +62,40 @@ Page({
   },
 
 
-  openTopic: function () {
+  openTopic: function (event) {
+    console.log(event);
     wx.navigateTo({
-      url: '/pages/topics/topic',
+      url: '/pages/topics/topic?id=' + event.currentTarget.dataset.id
+    });
+  },
+
+  onLoad: function () {
+    // 页面渲染后 执行
+    var that = this;
+    var options = {
+      url: config.service.topicsUrl,
+      login: false,
+      success(result) {
+        util.hideToast();
+        console.log('request success', result);
+        that.setData({
+          list: result.data.data
+        });
+      },
+      fail(error) {
+        util.showModel('请求失败', error);
+        console.log('request fail', error);
+      }
+    };
+    qcloud.request(options);
+
+    wx.getSystemInfo({
+      success: function (res) {
+        that.setData({
+          winWidth: res.windowWidth,
+          winHeight: res.windowHeight
+        });
+      }
     });
   }
 })

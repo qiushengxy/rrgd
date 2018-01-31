@@ -22,11 +22,13 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    util.showBusy('努力加载中...');
     var that = this;
     var options = {
       url: config.service.topicUrl + '?id=' + options.id,
       login: true,
       success(result) {
+        util.hideToast();
         console.log('request success', result);
         var topic = result.data.data[0];
         var answers = [];
@@ -60,15 +62,11 @@ Page({
           }, {
             name: that.data.topic.answers[1].value,
             data: 32,
-            color: 'orange'
+            color: 'green'
           }, {
             name: that.data.topic.answers[2].value,
             data: 2,
             color: 'blue'
-          }, {
-            name: that.data.topic.answers[2].value,
-            data: 19,
-            color: 'green'
           }],
           width: windowWidth,
           height: 400,
@@ -86,15 +84,11 @@ Page({
           }, {
             name: that.data.topic.answers[1].value,
             data: [3, 25, 6],
-            color: 'orange'
+            color: 'green'
           }, {
             name: that.data.topic.answers[2].value,
             data: [2, 7, 2],
             color: 'blue'
-          }, {
-            name: that.data.topic.answers[2].value,
-            data: [9, 2, 3],
-            color: 'green'
           }],
           yAxis: {
             min: 0,
@@ -118,15 +112,11 @@ Page({
           }, {
             name: that.data.topic.answers[1].value,
             data: [5, 20, 15, 14, 17, 9, 2],
-            color: 'orange'
+            color: 'green'
           }, {
             name: that.data.topic.answers[2].value,
             data: [35, 1, 1, 3, 2, 3, 3],
             color: 'blue'
-          }, {
-            name: that.data.topic.answers[2].value,
-            data: [1, 5, 9, 24, 3, 39, 23],
-            color: 'green'
           }],
           yAxis: {
             min: 0,
@@ -204,12 +194,26 @@ Page({
 
   clickButton: function (e) {
     if (this.data.answer === undefined) {
-      util.showModel('提示', '请表明您的观点之后再查看投票结果')
+      util.showModel('提示', '请表明您的观点之后再查看投票结果');
+      return;
     }
     var that = this;
     this.setData({
       answer: that.data.answer
     });
+    setTimeout(function () {
+
+
+    var query = wx.createSelectorQuery();
+    //选择id
+    query.select('#vote-result-all').boundingClientRect();
+    query.exec(function (res) {
+      console.log(res);
+      wx.pageScrollTo({
+        scrollTop: res[0].top + 320
+      });
+    });
+    }, 10);
   },
 
 })

@@ -3,74 +3,6 @@ var qcloud = require('../../vendor/wafer2-client-sdk/index')
 var config = require('../../config')
 var util = require('../../utils/util.js')
 
-var list=[
-  {
-    headpic: "/images/hot.png",
-    name: "这是一个比较热门或者有争议的投票话题",
-    time: "2018/1/20"
-  },
-  {
-    headpic: "/images/hot.png",
-    name: "这是一个比较热门或者有争议的投票话题",
-    time: "2018/1/20"
-  },
-  {
-    headpic: "/images/recommend.png",
-    name: "这是一个比较热门或者有争议的投票话题",
-    time: "2018/1/20"
-  },
-  {
-    headpic: "/images/footprint-on.png",
-    name: "这是一个比较热门或者有争议的投票话题",
-    time: "2018/1/20"
-  },
-  {
-    headpic: "/images/settings.png",
-    name: "这是一个比较热门或者有争议的投票话题",
-    time: "2018/1/20"
-  },
-  {
-    headpic: "/images/hot-on.png",
-    name: "这是一个比较热门或者有争议的投票话题",
-    time: "2018/1/20"
-  },
-  {
-    headpic: "/images/hot.png",
-    name: "这是一个比较热门或者有争议的投票话题",
-    time: "2018/1/20"
-  },
-  {
-    headpic: "/images/hot.png",
-    name: "这是一个比较热门或者有争议的投票话题",
-    time: "2018/1/20"
-  },
-  {
-    headpic: "/images/hot.png",
-    name: "这是一个比较热门或者有争议的投票话题",
-    time: "2018/1/20"
-  },
-  {
-    headpic: "/images/hot.png",
-    name: "这是一个比较热门或者有争议的投票话题",
-    time: "2018/1/20"
-  },
-  {
-    headpic: "/images/hot.png",
-    name: "这是一个比较热门或者有争议的投票话题",
-    time: "2018/1/20"
-  },
-  {
-    headpic: "/images/hot.png",
-    name: "这是一个比较热门或者有争议的投票话题",
-    time: "2018/1/20"
-  },
-  {
-    headpic: "/images/hot.png",
-    name: "这是一个比较热门或者有争议的投票话题",
-    time: "2018/1/20"
-  }
-];
-
 Page({
     data: {
         userInfo: {},
@@ -168,7 +100,7 @@ Page({
       var that = this;
       var options = {
         url: config.service.topicsUrl,
-        login: true,
+        login: false,
         success(result) {
           util.hideToast();
           console.log('request success', result);

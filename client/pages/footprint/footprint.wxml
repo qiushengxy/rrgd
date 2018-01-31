@@ -5,12 +5,18 @@
   </view>
       <scroll-view scroll-y="true" class="scroll-view" bindscrolltolower="lower">
         <block wx:for="{{list}}">
-          <view class="list-item" bindtap='openTopic'>
-            <image src="{{item.headpic}}" class="list-item-image"></image>
-            <view class="list-item-topic">
-              <text>{{item.name}}</text>
+          <view class="list-item" bindtap="openTopic" data-id="{{item.id}}">
+            <view class="list-item-left">
+              <image src="{{item.thumbnail}}" class="list-item-image" mode="aspectFit"></image>
             </view>
-            <view class="list-item-time">{{item.time}}</view>
+            <view class="list-item-middle">
+              <view class="list-item-subject">{{item.subject}}</view>
+              <view class="list-item-question">{{item.question}}</view>
+            </view>
+            <view class="list-item-right">
+              <view class="list-item-votes">{{item.votes}}</view>
+              <view class="list-item-label">参与</view>
+            </view>
           </view> 
         </block>
       </scroll-view>

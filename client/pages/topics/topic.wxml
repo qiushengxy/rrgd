@@ -1,7 +1,7 @@
 <!--pages/topics/topic.wxml-->
 <view class="topic-container">
 
-<view class="topic-title">{{topic.title}}</view>
+<view class="topic-title">{{topic.subject}}</view>
 
 <swiper class="topic-images" indicator-dots="true">    
   <block wx:for="{{topic.images}}" wx:for-index="index">    
@@ -13,6 +13,13 @@
 
 <view class="topic-text">
 {{topic.content}}
+</view>
+
+<view class="topic-links" wx:if="{{topic.content}}">
+  <text>相关新闻链接</text>
+  <label wx:for="{{topic.links}}" wx:for-index="index">    
+      <text class="topic-link">{{item}}</text> 
+  </label>
 </view>
 
 <view class="topic-question">
@@ -27,11 +34,11 @@
   </radio-group>
 </view>
 
-<view class="topic-button" wx:if="{{topic.content}}">
+<view class="topic-button" wx:if="{{topic.content}}" id="button-vote">
   <button type="default" bindtap="clickButton">查看投票结果</button>
 </view>
 
-<view class="topic-result" wx:if="{{answer}}">
+<view class="topic-result" wx:if="{{answer}}" id="vote-result-all">
   <text>所有数据</text>
   <canvas class="canvas" canvas-id="allGraph"></canvas>
 </view>
