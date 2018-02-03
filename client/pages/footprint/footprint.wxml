@@ -14,8 +14,8 @@
               <view class="list-item-question">{{item.question}}</view>
             </view>
             <view class="list-item-right">
-              <view class="list-item-votes">{{item.votes}}</view>
-              <view class="list-item-label">参与</view>
+              <view class="list-item-votes">{{item.votes}}参与</view>
+              <view class="list-item-label">{{item.creation}}</view>
             </view>
           </view> 
         </block>

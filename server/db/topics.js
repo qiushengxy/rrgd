@@ -15,7 +15,7 @@ var db_topics = {
       var connection = mysql.createConnection(config);
       connection.connect();
 
-      var select = 'SELECT id, subject, question, thumbnail, votes, creation, categories FROM topics';
+      var select = 'SELECT id, subject, question, thumbnail, votes, creation, categories FROM topics order by creation desc';
       connection.query(select, function (err, result) {
         if (err) {
           console.log('[SELECT ERROR] - ', err.message);

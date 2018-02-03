@@ -53,4 +53,31 @@
   <canvas class="canvas" canvas-id="ageGraph"></canvas>
 </view>
 
+<view class="topic-result" wx:if="{{answer}}">
+  <text>按职业</text>
+  <canvas class="canvas" canvas-id="educationGraph"></canvas>
+</view>
+
+<view class="topic-result" wx:if="{{answer}}">
+  <text>按收入水平</text>
+  <canvas class="canvas" canvas-id="incomeGraph"></canvas>
+</view>
+
+<view class="topic-result" wx:if="{{answer}}">
+  <text>按省份</text>
+  <canvas class="canvas" canvas-id="provinceGraph"></canvas>
+</view>
+
+<view wx:if="{{answer}}">
+  <navigator class="update-link" url="/pages/settings/userinfo">补充受教育程度信息查看按受教育程度投票结果</navigator>
+</view>
+
+<view wx:if="{{answer}}">
+  <navigator class="update-link" url="/pages/settings/userinfo">补充民族信息查看按民族投票结果</navigator>
+</view>
+
+<view wx:if="{{answer}}">
+  <navigator class="update-link" url="/pages/settings/userinfo">补充信仰信息查看按信仰投票结果</navigator>
+</view>
+
 </view>

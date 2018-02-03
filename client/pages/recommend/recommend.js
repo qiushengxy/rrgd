@@ -78,8 +78,13 @@ Page({
       success(result) {
         util.hideToast();
         console.log('request success', result);
+        var data = result.data.data;
+        data.forEach(function (item) {
+          item.creation = item.creation.substring(0, 10);
+          item.votes = item.votes > 9999 ? (Math.floor(item.votes / 1000) / 10) + '万' : item.votes;
+        });
         that.setData({
-          list: result.data.data
+          list: data
         });
       },
       fail(error) {

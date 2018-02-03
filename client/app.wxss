@@ -33,17 +33,14 @@
 }
 
 .list-item-middle {
-  width: 65%;
-  padding: 25rpx 0;
+  width: 60%;
+  padding: 25rpx 10rpx 0 0;
 }
 
 .list-item-subject {
   width: 100%;
   display: inline-block;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  font-size: 32rpx;
+  font-size: 26rpx;
 }
 
 .list-item-question {
@@ -52,22 +49,22 @@
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  font-size: 32rpx;
+  font-size: 28rpx;
   color: darkred;
   text-align: left;
 }
 
 .list-item-right {
-  width: 13%;
+  width: 18%;
   float: right;
 }
 
 .list-item-votes {
-  font-size: 24rpx;
+  font-size: 22rpx;
   color: red;
-  padding: 20rpx 0;
+  padding: 30rpx 0;
 }
 
 .list-item-label {
-  font-size: 24rpx;
+  font-size: 20rpx;
 }

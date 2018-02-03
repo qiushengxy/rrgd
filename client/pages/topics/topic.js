@@ -7,6 +7,9 @@ var wxCharts = require('../../vendor/wxcharts.js');
 var allChart = null;
 var genderChart = null;
 var ageChart = null;
+var educationChart = null;
+var incomeChart = null;
+var provinceChart = null;
 
 Page({
 
@@ -52,22 +55,30 @@ Page({
         } catch (e) {
           console.error('getSystemInfoSync failed!');
         }
+        var yAxis = {
+          min: 0,
+          title: '人数',
+          format: function (val) {
+            return val + '万';
+          }
+        };
         allChart = new wxCharts({
           canvasId: 'allGraph',
           type: 'pie',
           series: [{
             name: that.data.topic.answers[0].value,
-            data: 50,
+            data: Math.floor(Math.random() * 100),
             color: 'red'
-          }, {
+            }, {
             name: that.data.topic.answers[1].value,
-            data: 32,
+            data: Math.floor(Math.random() * 100),
             color: 'green'
-          }, {
+            }, {
             name: that.data.topic.answers[2].value,
-            data: 2,
+            data: Math.floor(Math.random() * 100),
             color: 'blue'
           }],
+          yAxis: yAxis,
           width: windowWidth,
           height: 400,
           dataLabel: false
@@ -79,24 +90,18 @@ Page({
           categories: ['男', '女', '其它'],
           series: [{
             name: that.data.topic.answers[0].value,
-            data: [15, 2, 5],
+            data: [Math.floor(Math.random() * 100), Math.floor(Math.random() * 100), Math.floor(Math.random() * 100)],
             color: 'red'
           }, {
             name: that.data.topic.answers[1].value,
-            data: [3, 25, 6],
+            data: [Math.floor(Math.random() * 100), Math.floor(Math.random() * 100), Math.floor(Math.random() * 100)],
             color: 'green'
           }, {
             name: that.data.topic.answers[2].value,
-            data: [2, 7, 2],
+            data: [Math.floor(Math.random() * 100), Math.floor(Math.random() * 100), Math.floor(Math.random() * 100)],
             color: 'blue'
           }],
-          yAxis: {
-            min: 0,
-            title: '人数',
-            format: function (val) {
-              return val + '万';
-            }
-          },
+          yAxis: yAxis,
           width: windowWidth,
           height: 400,
           dataLabel: false
@@ -107,24 +112,84 @@ Page({
           categories: ['60前', '60后', '70后', '80后', '90后', '00后', '10后'],
           series: [{
             name: that.data.topic.answers[0].value,
-            data: [15, 2, 5, 4, 7, 19, 13],
+            data: [Math.floor(Math.random() * 100), Math.floor(Math.random() * 100), Math.floor(Math.random() * 100), Math.floor(Math.random() * 100), Math.floor(Math.random() * 100), Math.floor(Math.random() * 100), Math.floor(Math.random() * 100)],
             color: 'red'
           }, {
             name: that.data.topic.answers[1].value,
-            data: [5, 20, 15, 14, 17, 9, 2],
+            data: [Math.floor(Math.random() * 100), Math.floor(Math.random() * 100), Math.floor(Math.random() * 100), Math.floor(Math.random() * 100), Math.floor(Math.random() * 100), Math.floor(Math.random() * 100), Math.floor(Math.random() * 100)],
             color: 'green'
           }, {
             name: that.data.topic.answers[2].value,
-            data: [35, 1, 1, 3, 2, 3, 3],
+            data: [Math.floor(Math.random() * 100), Math.floor(Math.random() * 100), Math.floor(Math.random() * 100), Math.floor(Math.random() * 100), Math.floor(Math.random() * 100), Math.floor(Math.random() * 100), Math.floor(Math.random() * 100)],
             color: 'blue'
           }],
-          yAxis: {
-            min: 0,
-            title: '人数',
-            format: function (val) {
-              return val + '万';
-            }
-          },
+          yAxis: yAxis,
+          width: windowWidth,
+          height: 400,
+          dataLabel: false
+        });
+        educationChart = new wxCharts({
+          canvasId: 'educationGraph',
+          type: 'column',
+          categories: ['小学／初中', '高中/职专', '本科', '研究生', '博士'],
+          series: [{
+            name: that.data.topic.answers[0].value,
+            data: [Math.floor(Math.random() * 100), Math.floor(Math.random() * 100), Math.floor(Math.random() * 100), Math.floor(Math.random() * 100), Math.floor(Math.random() * 100)],
+            color: 'red'
+          }, {
+            name: that.data.topic.answers[1].value,
+            data: [Math.floor(Math.random() * 100), Math.floor(Math.random() * 100), Math.floor(Math.random() * 100), Math.floor(Math.random() * 100), Math.floor(Math.random() * 100)],
+            color: 'green'
+          }, {
+            name: that.data.topic.answers[2].value,
+            data: [Math.floor(Math.random() * 100), Math.floor(Math.random() * 100), Math.floor(Math.random() * 100), Math.floor(Math.random() * 100), Math.floor(Math.random() * 100)],
+            color: 'blue'
+          }],
+          yAxis: yAxis,
+          width: windowWidth,
+          height: 400,
+          dataLabel: false
+        });
+        incomeChart = new wxCharts({
+          canvasId: 'incomeGraph',
+          type: 'column',
+          categories: ['0-5万', '5-10万', '10-50万', '50-100万', '富豪'],
+          series: [{
+            name: that.data.topic.answers[0].value,
+            data: [Math.floor(Math.random() * 100), Math.floor(Math.random() * 100), Math.floor(Math.random() * 100), Math.floor(Math.random() * 100), Math.floor(Math.random() * 100)],
+            color: 'red'
+          }, {
+            name: that.data.topic.answers[1].value,
+            data: [Math.floor(Math.random() * 100), Math.floor(Math.random() * 100), Math.floor(Math.random() * 100), Math.floor(Math.random() * 100), Math.floor(Math.random() * 100)],
+            color: 'green'
+          }, {
+            name: that.data.topic.answers[2].value,
+            data: [Math.floor(Math.random() * 100), Math.floor(Math.random() * 100), Math.floor(Math.random() * 100), Math.floor(Math.random() * 100), Math.floor(Math.random() * 100)],
+            color: 'blue'
+          }],
+          yAxis: yAxis,
+          width: windowWidth,
+          height: 400,
+          dataLabel: false
+        });
+        provinceChart = new wxCharts({
+          canvasId: 'provinceGraph',
+          type: 'column',
+          categories: ['北京', '上海', '广东', '河南', '江苏', '四川', '其它省份'],
+          series: [{
+            name: that.data.topic.answers[0].value,
+            data: [Math.floor(Math.random() * 100), Math.floor(Math.random() * 100), Math.floor(Math.random() * 100), Math.floor(Math.random() * 100), Math.floor(Math.random() * 100), Math.floor(Math.random() * 100), Math.floor(Math.random() * 100)],
+            color: 'red'
+          }, {
+            name: that.data.topic.answers[1].value,
+            data: [Math.floor(Math.random() * 100), Math.floor(Math.random() * 100), Math.floor(Math.random() * 100), Math.floor(Math.random() * 100), Math.floor(Math.random() * 100), Math.floor(Math.random() * 100), Math.floor(Math.random() * 100)],
+            color: 'green'
+          }, {
+            name: that.data.topic.answers[2].value,
+            data: [Math.floor(Math.random() * 100), Math.floor(Math.random() * 100), Math.floor(Math.random() * 100), Math.floor(Math.random() * 100), Math.floor(Math.random() * 100), Math.floor(Math.random() * 100), Math.floor(Math.random() * 100)],
+            color: 'blue'
+          }],
+          yAxis: yAxis,
           width: windowWidth,
           height: 400,
           dataLabel: false
